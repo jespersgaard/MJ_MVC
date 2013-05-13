@@ -7,9 +7,6 @@
 								<li class='active'>
 									<a href="#profile" data-toggle='tab'><i class="icon-user"></i> Profile</a>
 								</li>
-								<li>
-									<a href="#notifications" data-toggle='tab'><i class="icon-bullhorn"></i> Notifications</a>
-								</li>
 							</ul>
 							<div class="tab-content padding tab-content-inline tab-content-bottom">
 								<div class="tab-pane active" id="profile">
@@ -17,7 +14,7 @@
 										<div class="row-fluid">
 											<div class="span2">
 												<div class="fileupload fileupload-new" data-provides="fileupload">
-													<div class="fileupload-new thumbnail" style="max-width: 200px; max-height: 150px;"><img src="img/demo/user-1.jpg" /></div>
+													<div class="fileupload-new thumbnail" style="max-width: 200px; max-height: 150px;"><img src="<?php echo URL ?>data/users/<?php echo $this->user[0]['userid']; ?>/profile/user.jpg" /></div>
 													<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
 													<div>
 														<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" name='imagefile' /></span>
@@ -42,20 +39,26 @@
 													</div>
 												</div>
 												<div class="control-group">
-													<label for="name" class="control-label right">Skills:</label>
+													<label for="telefonnr" class="control-label right">Telefon Nummer:</label>
 													<div class="controls">
-														<div class="span12"><input type="text" name="textfield" id="textfield" class="tagsinput" value="PHP,Laravel,Java"></div>
+														<input type="text" name="name" class='input-xlarge' value="<?php echo $this->user[0]['telefonnr']; ?>">
 													</div>
 												</div>
 												<div class="control-group">
 													<label for="email" class="control-label right">Email:</label>
 													<div class="controls">
-														<input type="text" name="email" class='input-xlarge' value="j.doe@johndoeemail.com">
+														<input type="text" name="email" class='input-xlarge' value="<?php echo $this->user[0]['email']; ?>">
 														<div class="form-button">
 															<a href="#" class="btn btn-grey-4 change-input">Change</a>
 														</div>
 													</div>
 												</div>
+												<div class="control-group">
+													<label for="skype" class="control-label right">Skype:</label>
+													<div class="controls">
+														<input type="text" name="name" class='input-xlarge' value="<?php echo $this->user[0]['skype']; ?>">
+													</div>
+												</div>												
 												<div class="control-group">
 													<label for="pw" class="control-label right">Password:</label>
 													<div class="controls">
@@ -73,33 +76,7 @@
 										</div>
 									</form>
 								</div>
-								<div class="tab-pane" id="notifications">
-									<form action="#" class="form-horizontal">
-										<div class="control-group">
-											<label for="asdf" class="control-label">Email notifications</label>
-											<div class="controls">
-												<label class="checkbox"><input type="checkbox" name="asdf"> Send me security emails</label>
-												<label class="checkbox"><input type="checkbox" name="asdf"> Send system emails</label>
-												<label class="checkbox"><input type="checkbox" name="asdf"> Lorem ipsum dolor</label>
-												<label class="checkbox"><input type="checkbox" name="asdf"> Minim veli</label>
-											</div>
-										</div>
-										<div class="control-group">
-											<label for="asdf" class="control-label">Email for notifications</label>
-											<div class="controls">
-												<select name="email" id="email">
-													<option value="1">asdf@blasdas.com</option>
-													<option value="2">johnDoe@asdasf.de</option>
-													<option value="3">janeDoe@janejanejane.net</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-actions">
-											<input type="submit" class='btn btn-primary' value="Save">
-											<input type="reset" class='btn' value="Discard changes">
-										</div>
-									</form>
-								</div>
+
 
 							</div>
 						</div>

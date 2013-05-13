@@ -4,6 +4,14 @@
 						<h1>Welcome <?php echo  $_SESSION['login']; ?></h1>
 					</div>
 					<div class="pull-right">
+					<ul class="minitiles">
+							<li class='blue'>
+								<a href="#"><i class="icon-calendar"></i></a>
+							</li>
+							<li class='blue'>
+								<a href="#"><i class="icon-tasks"></i></a>
+							</li>
+						</ul>
 						<ul class="stats">
 							<li class='lightred'>
 								<i class="icon-calendar"></i>

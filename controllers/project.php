@@ -41,5 +41,9 @@ class Project extends Controller {
 		$this->view->render('project/task');	
         $this->view->render('layout/footer');		
 	}	
-	
+	function activities() {
+        $this->view->render('layout/header');
+		$this->view->render('project/activities');	
+        $this->view->render('layout/footer');		
+	}	
 }

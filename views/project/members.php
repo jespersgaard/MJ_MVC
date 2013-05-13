@@ -2,7 +2,7 @@
 	<div class="page-header">	
 <?php echo "<div>
 									<a href='" . URL . "project/intro' class='btn' id='activities'><i class='icon-time'></i> Overview</a>			
-									<a href='" . URL . "project/timeline' class='btn btn' id='activities'><i class='icon-time'></i> Activities</a>											
+									<a href='" . URL . "project/activities' class='btn btn' id='activities'><i class='icon-time'></i> Activities</a>											
 									<a href='" . URL . "project/task' class='btn'><i class='icon-tasks'></i> Tasks</a>											
 									<a href='" . URL . "project/members' class='btn btn-primary'><i class='icon-group'></i> Members</a>
 									<div class='btn-group pull-right'>

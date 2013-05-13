@@ -14,7 +14,7 @@ class User_Model extends Model
 	
 	public function userSingleList($userid)
 	{
-		return $this->db->select('SELECT userid, login, role FROM user WHERE userid = :userid', array(':userid' => $userid));
+		return $this->db->select('SELECT * FROM user WHERE userid = :userid', array(':userid' => $userid));
 	}
 	
 	public function create($data)
