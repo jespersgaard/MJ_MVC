@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 3.5.2.2
--- http://www.phpmyadmin.net
---
--- Vært: 127.0.0.1
--- Genereringstid: 13. 05 2013 kl. 12:24:54
--- Serverversion: 5.5.27-log
--- PHP-version: 5.4.3
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
 -- Database: `mvc`
 --
@@ -96,9 +78,5 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`userid`, `login`, `password`, `username`, `role`, `email`, `skype`, `telefonnr`) VALUES
-(1, 'jesse', '3327a2154aa1900fa110ae3d20d27d051ba719ead0396f1a23d6865b2677ed4a', '', 'owner', '', NULL, ''),
-(19, 'martin', '91a96e1a27214c5782f28c65bd042a6299d5ab52540b8c56d5f67487a57e4904', '', 'admin', 'martin@jespersgaard.com', 'martin_jespersgaard', '27292700');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(1, 'admin', '36b664527d14f8b142dbcf29b5ac7ac7705ad9fa57956e3b08f03c834fd0396f', '', 'owner', '', NULL, ''),
+(2, 'martin', '91a96e1a27214c5782f28c65bd042a6299d5ab52540b8c56d5f67487a57e4904', '', 'admin', 'martin@jespersgaard.com', 'martin_jespersgaard', '27292700');

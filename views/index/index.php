@@ -11,6 +11,9 @@
 							<li class='blue'>
 								<a href="#"><i class="icon-tasks"></i></a>
 							</li>
+							<li class='red'>
+								<a href="<?php echo URL ?>index/tiles"><i class="icon-desktop"></i></a>
+							</li>							
 						</ul>
 						<ul class="stats">
 							<li class='lightred'>

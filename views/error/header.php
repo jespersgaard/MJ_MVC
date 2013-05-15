@@ -7,6 +7,10 @@
 	<!-- Apple devices fullscreen -->
 	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+		
+		<!-- Stylesheets -->
+		<link rel='stylesheet' type='text/css' href='<?php echo URL . "public/styles/style.css"; ?>' />
+		
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href='<?php echo URL . "public/css/bootstrap.css"; ?>'>
 	<!-- Bootstrap responsive -->
@@ -33,8 +37,6 @@
 	<link rel="stylesheet" href='<?php echo URL . "public/css/plugins/xeditable/bootstrap-editable.css"; ?>'>
 	<!-- Tags -->
 	<link rel="stylesheet" href='<?php echo URL . "public/css/plugins/tagsinput/jquery.tagsinput.css"; ?>'>
-	<!-- dataTables -->
-	<link rel="stylesheet" href='<?php echo URL . "public/css/plugins/datatable/TableTools.css"; ?>'>
 	<!-- Theme CSS -->
 	<link rel="stylesheet" href='<?php echo URL . "public/css/style__not-minified.css"; ?>'>
 	<!-- Color CSS -->
@@ -68,11 +70,10 @@
 	?>
 
 	</head>
-<body  data-layout-topbar="fixed" data-layout-sidebar="fixed" data-mobile-sidebar="false" class="theme-satblue">
+<body  class="error">
 	
 <?php Session::init(); ?>
 
 	
-<div id="main">
-			<div class="container-fluid">	
+
 	

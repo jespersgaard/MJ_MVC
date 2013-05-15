@@ -11,6 +11,8 @@ class User extends Controller {
 	{	
 		$this->view->userList = $this->model->userList();
         $this->view->render('layout/header');
+        $this->view->render('layout/menu_top');
+        $this->view->render('layout/menu_sidebar');		
 		$this->view->render('user/index');	
         $this->view->render('layout/footer');		
  	}
@@ -32,6 +34,8 @@ class User extends Controller {
 	{
 		$this->view->user = $this->model->userSingleList($id);
         $this->view->render('layout/header');
+        $this->view->render('layout/menu_top');
+        $this->view->render('layout/menu_sidebar');	
 		$this->view->render('user/edit');
         $this->view->render('layout/footer');
 	}
