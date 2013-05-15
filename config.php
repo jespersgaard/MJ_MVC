@@ -1,7 +1,7 @@
 <?php
 
 // Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', 'http://127.0.0.1:8080/mj_mvc/mj_mvc/');
+define('URL', 'http://127.0.0.1:8080/jespersgaard/');
 define('LIBS', 'libs/');
 
 define('DB_TYPE', 'mysql');

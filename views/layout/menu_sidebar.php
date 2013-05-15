@@ -12,9 +12,9 @@
 				</div>
 				<ul class="subnav-menu">			
 					<li>
-						<a href="<?php echo URL . "Index"; ?>"><i class="icon-tasks"></i> Old View</a>
+						<a href="<?php echo URL . "index/index"; ?>"><i class="icon-tasks"></i> Old View</a>
 					</li>					<li>
-						<a href="<?php echo URL . "Index/Tiles"; ?>"><i class="icon-list"></i> Tiles View</a>
+						<a href="<?php echo URL . "index/tiles"; ?>"><i class="icon-list"></i> Tiles View</a>
 					</li>
 				</ul>
 			</div>		
@@ -36,7 +36,7 @@
 				</div>
 				<ul class="subnav-menu">
 					<li>
-						<a href="Sprint"><i class="icon-tasks"></i> Sprints</a>
+						<a href="<?php echo URL . "project/sprint"; ?>"><i class="icon-tasks"></i> Sprints</a>
 					</li>					<li>
 						<a href="<?php echo URL . "project/task"; ?>"><i class="icon-list"></i> Tasks</a>
 					</li>

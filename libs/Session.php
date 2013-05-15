@@ -21,8 +21,14 @@ class Session
     
     public static function destroy()
     {
-        //unset($_SESSION);
-        session_destroy();
+        session_start();
+
+    // Deleting all content in $_SESSION
+    $_SESSION = array();
+
+    // Destroying the session
+    session_destroy();
+
     }
     
 }

@@ -5,20 +5,15 @@ class Dashboard extends Controller {
 	function __construct() {
 		parent::__construct();
 		Auth::handleLogin();
-		$this->view->js = array('dashboard/js/default.js');
 	}
 	
 	function index() 
 	{	
+        $this->view->render('layout/header');
+        $this->view->render('layout/menu_top');
+        $this->view->render('layout/menu_sidebar');		
 		$this->view->render('dashboard/index');
+        $this->view->render('layout/footer');		
 	}
 	
-	function logout()
-	{
-		Session::destroy();
-		header('location: ' . URL .  'login');
-		exit;
-	}
-	
-
 }

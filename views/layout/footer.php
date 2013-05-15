@@ -69,8 +69,12 @@
 	<script src='<?php echo URL . "public/js/plugins/form/jquery.form.min.js"; ?>'></script>
 	<!-- Elfinder -->
 	<script src='<?php echo URL . "public/js/plugins/elfinder/elfinder.min.js"; ?>'></script>
-	
-	
+	<!-- dataTables -->
+	<script src='<?php echo URL . "public/js/plugins/datatable/jquery.dataTables.min.js"; ?>'></script>
+	<script src='<?php echo URL . "public/js/plugins/datatable/TableTools.min.js"; ?>'></script>
+	<script src='<?php echo URL . "public/js/plugins/datatable/ColReorder.min.js"; ?>'></script>
+	<script src='<?php echo URL . "public/js/plugins/datatable/ColVis.min.js"; ?>'></script>
+	<script src='<?php echo URL . "public/js/plugins/datatable/jquery.dataTables.columnFilter.js"; ?>'></script>
 	
 	<!-- Theme framework -->
 	<script src='<?php echo URL . "public/js/eakroko.min.js"; ?>'></script>

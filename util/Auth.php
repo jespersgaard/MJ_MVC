@@ -2,6 +2,7 @@
 /**
  * 
  */
+ ob_start();
 class Auth
 {
     
@@ -13,7 +14,6 @@ class Auth
             session_destroy();
             header('location: ' . URL . 'welcome');
             exit;
-        }
-    }
-    
+		}
+	}
 }
