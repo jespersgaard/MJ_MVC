@@ -37,11 +37,11 @@
 										</tr>
 									</thead>
 									<tbody>
+							<!--TASK IS DEFINED HERE-->
+																
 										<tr>
 											<td>Framework</td>
-											<td>
-												Design GUI
-											</td>
+											<td>Design GUI</td>
 											<td class='hidden-350'><input type="text" name="textfield" id="textfield" class="input-medium datepick"></td>
 											<td class='hidden-1024'>
 												<select name="s2" id="s2" class='select2-me input-block-level' multiple="multiple">
@@ -61,12 +61,11 @@
 													<option value="04">Done</option>
 												</select>													
 											</td>
+							
 										</tr>
 										<tr>
 											<td>Implementation</td>
-											<td>
-												Write Code
-											</td>
+											<td>Write Code</td>
 											<td class='hidden-350'>29-05-2013</td>
 											<td class='hidden-1024'>Nicklas</td>
 											<td class='hidden-480'>
