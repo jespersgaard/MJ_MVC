@@ -14,9 +14,8 @@
 									  </ul>
 								</div>	
 									<hr width='100%'>
-								";
+			</div>					";
 ?>
-	</div>	<p>
 	<div>
 				<h4>Project Owner:<br></h4><a href="1#"><img src="<?php echo URL ?>/public/img/demo/user-1.jpg" class="img-circle"></a><p>
 				<hr width="100%">

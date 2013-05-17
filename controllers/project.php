@@ -4,6 +4,7 @@ class Project extends Controller {
 
 	function __construct() {
 		parent::__construct();
+		Auth::handleLogin();		
 	}
 	
 	function index() {
@@ -31,6 +32,7 @@ class Project extends Controller {
 	}
 
 	function intro() {
+		$this->view->project = $this->model->userSingleList($id);	
         $this->view->render('layout/header');
         $this->view->render('layout/menu_top');
         $this->view->render('layout/menu_sidebar');	
@@ -67,4 +69,5 @@ class Project extends Controller {
 		$this->view->render('project/sprint');	
         $this->view->render('layout/footer');		
 	}	
+	
 }

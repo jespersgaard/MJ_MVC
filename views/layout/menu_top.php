@@ -6,7 +6,7 @@
 			<div class="user">
 				
 				<div class="dropdown">
-					<a href="#" class='dropdown-toggle' data-toggle="dropdown"><?php echo  $_SESSION['login']; ?> <img src="<?php echo URL ?>data/users/<?php echo  $_SESSION['userid']; ?>/profile/user.jpg" width="27" alt=""></a>
+					<a href="#" class='dropdown-toggle' data-toggle="dropdown"><?php echo  $_SESSION['login']; ?> <img src="<?php echo URL ?>public/users/profilepic/<?php echo  $_SESSION['profilepic']; ?>.jpg" width="27" alt=""></a>
 					<ul class="dropdown-menu pull-right">
 						<li>
 							<a href="<?php echo URL . "user/edit/".$_SESSION['userid']; ?>">My profile</a>

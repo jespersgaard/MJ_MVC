@@ -1,42 +1,69 @@
-	<div id="new-task" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Add new task</h3>
-		</div>
-		<form action="#" class='new-task-form form-horizontal form-bordered'>
-			<div class="modal-body nopadding">
+<!-- MODAL FORM for creating a TASK -->
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">x</button>
+    <h3>Create a new Task</h3>
+  </div>
+  <div class="modal-body">
+	<form method="post" action="<?php echo URL;?>project/create_task">
+	<div class="control-group  span6">
+		<div class="controls">
+			<div class="span3">
 				<div class="control-group">
-					<label for="tasktitel" class="control-label">Icon</label>
+					<label for="textfield" class="control-label">Task Name</label>
 					<div class="controls">
-						<select name="icons" id="icons" class='select2-me input-xlarge'>
-							<option value="icon-eye-open">icon-eye-open</option>
-							<option value="icon-facetime-video">icon-facetime-video</option>
-							<option value="icon-fighter-jet">icon-fighter-jet</option>
-							<option value="icon-film">icon-film</option>
-							<option value="icon-hospital">icon-hospital</option>
-							<option value="icon-medkit">icon-medkit</option>
-							<option value="icon-plus-sign-alt">icon-plus-sign-alt</option>
-							<option value="icon-stethoscope">icon-stethoscope</option>
-							<option value="icon-user-md">icon-user-md</option>
+						<input type="text" name="name" id="textfield" class="input-normal">
+					</div>
+				</div>	
+				<div class="control-group">
+					<label for="textfield" class="control-label">Sprint</label>
+					<div class="controls">
+						<input type="text" name="sprintID" id="textfield" class="input-normal">
+					</div>
+				</div>	
+				<div class="control-group">
+					<label for="textfield" class="control-label">Description</label>
+						<div class="controls">
+							<textarea name="description" id="textarea" class="input-block-level input-normal"> </textarea>
+						</div>
+				</div>					
+				<div class="control-group">
+					<label for="textfield" class="control-label">Assigned To</label>
+					<div class="controls">
+						<select name="userID" id="s2" class='select2-me input-block-level' multiple="multiple">
+							<option value="01">Martin</option>
+							<option value="02">Frederik</option>
+							<option value="03">Casper</option>
+							<option value="04">Thomas</option>
+							<option value="05">Nichlas</option>
+							<option value="06">Christoffer</option>
 						</select>
 					</div>
-				</div>
-				<div class="control-group">
-					<label for="task-name" class="control-label">Task</label>
-					<div class="controls">
-						<input type="text" name="task-name">
+				</div>				
+			</div>
+			<div class="span1">
+				<div class="">
+					<div class="check-line">
+						<input type="radio" id="c1" class='icheck-me' name="status" data-skin="square" data-color="blue" checked> <label class='inline' for="c1">ToDo</label>
 					</div>
-				</div>
-				<div class="control-group">
-					<label for="tasktitel" class="control-label"></label>
-					<div class="controls">
-						<label class="checkbox"><input type="checkbox" name="task-bookmarked" value="yep"> Mark as important</label>
+					<div class="check-line">
+						<input type="radio" id="c2" class='icheck-me' name="status" data-skin="square" data-color="blue" > <label class='inline' for="c2">Ongoing</label>
+					</div>
+					<div class="check-line">
+						<input type="radio" id="c3"  class='icheck-me' name="status" data-skin="square" data-color="red" > <label class='inline' for="c3">Blocked</label>
+					</div>
+					<div class="check-line">
+						<input type="radio" id="c4"  class='icheck-me' name="status" data-skin="square" data-color="green"  > <label class='inline' for="c4">Done</label>
 					</div>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<input type="submit" class="btn btn-primary" value="Add task">
-			</div>
-		</form>
-
+		</div>
 	</div>
+
+ </div>
+  <div class="modal-footer">
+    <input type="submit" class="btn btn-success"></form> 
+    <a class="btn btn-danger" data-dismiss="modal">Cancel</a>
+  </div>
+</div>
+	

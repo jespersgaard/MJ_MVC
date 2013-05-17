@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href='<?php echo URL . "public/css/style__not-minified.css"; ?>'>
 	<!-- Color CSS -->
 	<link rel="stylesheet" href='<?php echo URL . "public/css/themes__not-minified.css"; ?>'>
-
+	<link rel="stylesheet" href='<?php echo URL . "public/css/my.css"; ?>'>
 	
 	<!--[if lte IE 9]>
 		<script src="js/plugins/placeholder/jquery.placeholder.min.js"></script>
@@ -57,8 +57,9 @@
 	
 	<!-- jQuery -->
 	<script src='<?php echo URL . "public/js/jquery.min.js"; ?>'></script>
-		<?php
-	if (isset($this->js)) 
+
+	<?php
+			if (isset($this->js)) 
 	{
 		foreach ($this->js as $js)
 		{

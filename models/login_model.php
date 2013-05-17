@@ -25,12 +25,23 @@ class Login_Model extends Model
             Session::set('role', $data['role']);
             Session::set('loggedIn', true);
             Session::set('userid', $data['userid']);
-            Session::set('login', $data['login']);			
+            Session::set('login', $data['login']);		
+            Session::set('profilepic', $data['profilepic']);			
             header('location: ../index');
         } else {
             header('location: ../login');
         }
-        
     }
-    
+	public function createaccount($data)
+	{
+		$this->db->insert('user', array(
+			'login' => $data['login'],
+			'password' => Hash::create('sha256', $data['password'], HASH_PASSWORD_KEY),
+			'email' => $data['email'],
+			'skype' => $data['skype'],
+			'telefonnr' => $data['telefonnr'],			
+			'role' => 'Default'
+		));
+	}
+
 }

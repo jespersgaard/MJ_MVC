@@ -14,7 +14,7 @@
 										<div class="row-fluid">
 											<div class="span2">
 												<div class="fileupload fileupload-new" data-provides="fileupload">
-													<div class="fileupload-new thumbnail" style="max-width: 200px; max-height: 150px;"><img src="<?php echo URL ?>data/users/<?php echo $this->user[0]['userid']; ?>/profile/user.jpg" /></div>
+													<div class="fileupload-new thumbnail" style="max-width: 200px; max-height: 150px;"><img src="<?php echo URL ?>public/users/profilepic/<?php echo  $_SESSION['profilepic']; ?>.jpg" /></div>
 													<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
 													<div>
 														<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" name='imagefile' /></span>

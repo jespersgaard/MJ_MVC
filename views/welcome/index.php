@@ -27,7 +27,7 @@
       </div>
         <div class="span6">
           <p><h5>SPM is powerful, yet easy-to-use Web-based Student Project Management Software that takes your study group one step closer to project success. Its fantastic set of features and elegant interface will help your group become more productive in achieving their goals.</h5></p>
-		    <a class="btn btn-large btn-success" href="#">Sign up today</a>
+		    <a class="btn btn-large btn-success" href="<?php echo URL; ?>login/register">Sign up today</a>
         </div>
 
       </div>	  
