@@ -6,7 +6,7 @@
 									<a href='" . URL . "project/task' class='btn'><i class='icon-tasks'></i> Tasks</a>											
 									<a href='" . URL . "project/members' class='btn btn-primary'><i class='icon-group'></i> Members</a>
 									<div class='btn-group pull-right'>
-									  <a class='btn btn-danger dropdown-toggle' data-toggle='dropdown' href='#'><i class='icon-cogs'></i> <span class='caret'></span>
+									  <a class='btn btn-danger dropdown-toggle' data-toggle='dropdown' href='#'><i class='icon-cogs'></i> Project Settings<span class='caret'></span></a>
 									  </a>
 									  <ul class='dropdown-menu pull-right'>
 										  <li><a tabindex='-1' href='" . URL . "project/'>Privacy</a></li>
