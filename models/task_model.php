@@ -21,19 +21,22 @@ class Task_Model
 		//Check if the object is already loaded: 
 		if(!$this->isloaded)
 		{
+
+		//prepare deadline to mysql date:
+		$mysqldeadline = date('Y-m-d H:i:s', $data['deadline']);
 		//Insert into db: 
 		$this->db->insert('task', array(
 			'name' => $data['name'],
 			'description' => $data['description'],
 			'sprintID' => $data['sprintID'],
 			'state' => $data['state'],
-			//'deadline' => date('deadline') // use GMT aka UTC 0:00
-		));
+			'deadline' => $mysqldeadline));
+		
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
 	}
 	
-	public function updateName($data) {
+	public function updateName($data = array()) {
 		
 		if(!$this->isLoaded){
 			$this->load($id);
@@ -44,6 +47,11 @@ class Task_Model
 			$this->db->update('task', $postData, "`taskID` = '{$data['taskID']}'");
 			$this->name = $data['name'];
 		}
+	}
+	
+	public function load($data = array())
+	{
+		//$phpdate = strtotime( $mysqldate );
 	}
 		
 	
