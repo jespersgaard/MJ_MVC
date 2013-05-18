@@ -1,21 +1,17 @@
 <div class="row-fixed">
 	<div class="page-header">	
 		<?php echo "
-
 		<div>
-			<a href='" . URL . "project/project_all' class='btn' id='activities'><i class='icon-list'></i> List View</a>			
-			<a href='" . URL . "project/project_gitter' class='btn btn-primary' id='activities'><i class='icon-th'></i> Grid View</a>											
+			<a href='" . URL . "project' class='btn'><i class='icon-list'></i> List View</a>			
+			<a href='" . URL . "project/index_gitter' class='btn btn-primary'><i class='icon-th'></i> Grid View</a>											
 			<hr width='100%'>
 		</div>	
 		"; ?>
 	</div>
 <div>
 <ul class="thumbnails">
-
-
-							
 <?php
-	foreach($this->project_all as $key => $value) {
+	foreach($this->project_list_mine as $key => $value) {
 		echo '						
 	<li class="span3"><div class="thumbnail"><div><div class="row"><div class="span3"><div class="row">
 		<div class="span1"><a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a></div>
@@ -38,8 +34,7 @@
 				<a href="1#"><img src="<?php echo URL ?>/public/img/demo/user-avatar.jpg" class="img-circle"></a>
 				<a href="1#"><img src="<?php echo URL ?>/public/img/demo/user-avatar.jpg" class="img-circle"></a><P>
 		</div></div></li>		';
-		}
-						?>				  
-				</ul>
+		}?>				  
+</ul>
 </div>		
 </div>		

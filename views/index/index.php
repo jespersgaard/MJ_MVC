@@ -2,6 +2,7 @@
 				<div class="page-header">
 					<div class="pull-left">
 						<h1>Welcome <?php echo  $_SESSION['login']; ?></h1>
+						<?php echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'; ?>
 					</div>
 					<div class="pull-right">
 					<ul class="minitiles">
