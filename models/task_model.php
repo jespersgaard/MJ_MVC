@@ -1,5 +1,6 @@
 <?php 
-
+require 'Database.php';
+require 'config.php';
 class Task_Model
 {
 	public $ID;
@@ -19,7 +20,7 @@ class Task_Model
 	public function create($data = array())
 	{
 		//Check if the object is already loaded: 
-		if(!$this->isloaded)
+		if(!$this->isLoaded)
 		{
 		//Insert into db: 
 		$this->db->insert('task', array(
@@ -29,7 +30,7 @@ class Task_Model
 			'state' => $data['state'],
 			//'deadline' => date('deadline') // use GMT aka UTC 0:00
 		));
-		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
+		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO";/* $this->deadline = $data['deadline'];*/ $this->isLoaded = TRUE;
 		}
 	}
 	
