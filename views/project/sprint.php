@@ -17,108 +17,86 @@
 </div>";
 ?>
     
-<div class="accordion" id="accordion2">
-<div class="accordion-group">
-<div class="accordion-heading">    
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        <h4>24-05-2013 until 29-05-2013 <span class="label label-success"> Aktiv</span></h4>
-    </a>
-     
-</div>
-<div id="collapseOne" class="accordion-body collapse">
-<?php echo "<div class='pull-right'>
-        <a href='" . URL . "project/intro' class='btn btn-success' id='activities'><i class='icon-plus-sign'></i> New Task</a>
-        <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-cogs'></i> Edit Sprint</a>
-        <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i> Delete Sprint</a>
-</div>";
-?>   
-    
-<div class="accordion-inner">
-    <table class="table table-hover table-nomargin table-bordered">
-            <thead>
-                    <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th class='hidden-350'>Platform(s)</th>
-                            <th class='hidden-1024'>Engine version</th>
-                            <th class='hidden-480'>CSS grade</th>
-                    </tr>
-            </thead>
-            <tbody>
-                    <tr>
-                            <td>Trident</td>
-                            <td>
-                                    Internet
-                                    Explorer 4.0
-                            </td>
-                            <td class='hidden-350'>Win 95+</td>
-                            <td class='hidden-1024'>4</td>
-                            <td class='hidden-480'>X</td>
-                    </tr>
-                    <tr>
-                            <td>Presto</td>
-                            <td>Nokia N800</td>
-                            <td class='hidden-350'>N800</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.4</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Dillo 0.8</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Links</td>
-                            <td class='hidden-350'>Text only</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Lynx</td>
-                            <td class='hidden-350'>Text only</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
-                    </tr>
-            </tbody>
-    </table>
-</div>
-</div>
-</div>
-<div class="accordion-group">
-<div class="accordion-heading">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-    <h4>24-05-2013 until 29-05-2013 <span class="label label-info"> Future</span></h4>
-</a>
-</div>
-<div id="collapseTwo" class="accordion-body collapse">
-<div class="accordion-inner">
-    Anim pariatur cliche...Lorem ipsum Duis occaecat Excepteur est magna tempor ex ea enim sunt mollit proident. Lorem ipsum sed laboris ut adipisicing ut et aute occaecat aute enim occaecat. 
-</div>
-</div>
-</div>
-<div class="accordion-group">
-<div class="accordion-heading">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-    <h4>24-05-2013 until 29-05-2013 <span class="label label-inverse"> Outdated</span></h4>
-</a>
-</div>
-<div id="collapseThree" class="accordion-body collapse">
-<div class="accordion-inner">
-    Anim pariatur cliche...Lorem ipsum do culpa adipisicing quis non nisi ullamco. Lorem ipsum velit dolore qui Excepteur fugiat et dolor proident reprehenderit magna aliqua enim consectetur nisi. Lorem ipsum sit laborum est magna veniam ex ut velit do aliqua amet dolore enim minim eu. Lorem ipsum adipisicing officia occaecat deserunt enim minim veniam sint amet sed consectetur nisi quis. 
-</div>
-</div>
-</div>
+<div class="accordion" id="accordionSprint">
+<?php
+   // foreach($this->noteList as $key => $value) {
+echo "
+	<div class='accordion-group'>
+		<div class='accordion-heading'>    
+			<a class='accordion-toggle' data-toggle='collapse' data-parent='#accordion2' href='#collapseOne'>
+				<h4>24-05-2013 until 29-05-2013 <span class='label label-success'> Current</span></h4>
+			</a>
+			 
+		</div>
+		<div id='collapseOne' class='accordion-body collapse in'>
+		<div class='pull-right'>
+			<a href='" . URL . "project/intro' class='btn btn-success' id='activities'><i class='icon-plus-sign'></i> New Main Task</a>		
+			<a href='" . URL . "project/intro' class='btn btn-success' id='activities'><i class='icon-plus-sign'></i> New Sub Task</a>
+			<a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-cogs'></i> Edit Sprint</a>
+			<a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i> Delete Sprint</a>
+		</div>
+		   
+
+			<div class='accordion-inner'>
+				<table class='table table-hover table-nomargin'>
+					<thead>
+					<tr>
+							<th class='span4'>Main Task(s)</th>
+							<th class='hidden-350 span2'>Owner</th>
+							<th class='hidden-350 span1'>Status</th>
+							<th>Sub Task(s)</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Design GUI
+							</td>
+							<td class='hidden-350 '>Martin</td>	
+							<td class='hidden-350 '>Ongoing
+								<a href='" . URL . "project/intro' class='btn btn-info pull-right' id='activities'><i class='icon-edit'></i></a>
+								<a href='" . URL . "project/intro' class='btn btn-danger pull-right' id='activities'><i class='icon-trash'></i></a>							
+							</td>							
+							<td>
+								<div class='accordion' id='accordionTask'>
+								  <div class='accordion-group'>
+									<div class='accordion-heading'>
+									  <a class='accordion-toggle' data-toggle='collapse' data-parent='#accordionTask' href='#task1'>
+										Task 1
+									  </a>
+									</div>
+									<div id='task1' class='accordion-body collapse'>
+									<a href='" . URL . "project/intro' class='btn btn-danger pull-right' id='activities'><i class='icon-trash'></i></a>
+									<a href='" . URL . "project/intro' class='btn btn-info pull-right' id='activities'><i class='icon-edit'></i></a>
+									  <div class='accordion-inner'>
+										Task No. 1
+																				
+									  </div>
+									</div>
+								  </div>
+								<div class='accordion-group'>
+									<div class='accordion-heading'>
+									  <a class='accordion-toggle' data-toggle='collapse' data-parent='#accordionTask' href='#task2'>
+										Task 2
+									  </a>
+									</div>
+									<div id='task2' class='accordion-body collapse'>
+									  <div class='accordion-inner'>
+										Task No. 2
+									<a href='" . URL . "project/intro' class='btn btn-danger pull-right' id='activities'><i class='icon-trash'></i></a>
+									<a href='" . URL . "project/intro' class='btn btn-info pull-right' id='activities'><i class='icon-zoom-in'></i></a>
+									  </div>
+									</div>
+								  </div>								  
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>";
+?>
 </div>   
 
 </div>

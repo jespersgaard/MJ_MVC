@@ -8,22 +8,32 @@ class Project extends Controller {
 	}
 	
 	function index() {
+		$this->view->project_list_mine = $this->model->project_list_mine();	
         $this->view->render('layout/header');
         $this->view->render('layout/menu_top');
         $this->view->render('layout/menu_sidebar');	
 		$this->view->render('project/index');	
         $this->view->render('layout/footer');		
 	}
-	
- 	function project_list() {
+	function index_gitter() {
+		$this->view->project_list_mine = $this->model->project_list_mine();	
         $this->view->render('layout/header');
         $this->view->render('layout/menu_top');
         $this->view->render('layout/menu_sidebar');	
-		$this->view->render('project/project_list');	
+		$this->view->render('project/index_gitter');	
+        $this->view->render('layout/footer');		
+	}	
+ 	function project_all() {
+		$this->view->project_all = $this->model->project_all();
+        $this->view->render('layout/header');
+        $this->view->render('layout/menu_top');
+        $this->view->render('layout/menu_sidebar');	
+		$this->view->render('project/project_all');	
         $this->view->render('layout/footer');			
 	}   
 	
 	function project_gitter() {
+		$this->view->project_all = $this->model->project_all();	
         $this->view->render('layout/header');
         $this->view->render('layout/menu_top');
         $this->view->render('layout/menu_sidebar');	

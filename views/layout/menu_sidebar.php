@@ -24,9 +24,9 @@
 				</div>
 				<ul class="subnav-menu">
 					<li>
-						<a href="<?php echo URL . "project/project_list"; ?>"><i class="icon-tasks"></i> My Projects</a>
+						<a href="<?php echo URL . "project"; ?>"><i class="icon-tasks"></i> My Projects</a>
 					</li>					<li>
-						<a href="<?php echo URL . "project/intro"; ?>"><i class="icon-list"></i> Open Projects</a>
+						<a href="<?php echo URL . "project/project_all"; ?>"><i class="icon-list"></i> All Projects</a>
 					</li>
 				</ul>
 			</div>

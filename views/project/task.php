@@ -47,14 +47,11 @@
             </thead>
             <tbody>
                     <tr>
-                            <td>Trident</td>
-                            <td>
-                                    Internet
-                                    Explorer 4.0
-                            </td>
-                            <td class='hidden-350'>Win 95+</td>
-                            <td class='hidden-1024'>4</td>
-                            <td class='hidden-480'>X</td>
+                            <td>Create Task</td>
+                            <td>The controller and model needs update                          </td>
+                            <td class='hidden-350'>29-05-2013</td>
+                            <td class='hidden-1024'>Christoffer</td>
+                            <td class='hidden-480'>Ongoing</td>
                             <td>
                                 <?php echo "<div class='pull-right'>
                                     <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
@@ -63,48 +60,7 @@
                                 ?>                                 
                             </td>
                     </tr>
-                    <tr>
-                            <td>Presto</td>
-                            <td>Nokia N800</td>
-                            <td class='hidden-350'>N800</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.4</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Dillo 0.8</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
+
             </tbody>
     </table></div>
 </div>                                
@@ -142,56 +98,11 @@
             </thead>
             <tbody>
                     <tr>
-                            <td>Trident</td>
-                            <td>
-                                    Internet
-                                    Explorer 4.0
-                            </td>
-                            <td class='hidden-350'>Win 95+</td>
-                            <td class='hidden-1024'>4</td>
-                            <td class='hidden-480'>X</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Presto</td>
-                            <td>Nokia N800</td>
-                            <td class='hidden-350'>N800</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.4</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Dillo 0.8</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
+                            <td>Create Task</td>
+                            <td>We need to change current view                            </td>
+                            <td class='hidden-350'>29-05-2013</td>
+                            <td class='hidden-1024'>Martin</td>
+                            <td class='hidden-480'>Blocked</td>
                             <td>
                                 <?php echo "<div class='pull-right'>
                                     <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
@@ -207,101 +118,7 @@
                         </div>
                 </div>
         </div>
-        <div class="accordion-group">
-                <div class="accordion-heading">
-                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                            <h4>Update al controllers</h4>
-                        </a>
-                </div>
-                <div id="collapseThree" class="accordion-body collapse">
-                        <div class="accordion-inner">
-
-<div class="row-fluid">
-<?php echo "<div class='pull-right'>
-        <a href='" . URL . "project/intro' class='btn btn-success' id='activities'><i class='icon-plus-sign'></i> New Sub Task</a>
-        <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i> Edit Main Task</a>
-        <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i> Delete Main Task</a>
-</div>";
-?>     
-    <div>
-        <table class="table table-hover table-nomargin">
-            <thead>
-                    <tr>
-                            <th>Task</th>
-                            <th>Description</th>
-                            <th class='hidden-350'>Deadline</th>
-                            <th class='hidden-1024'>Assign To</th>
-                            <th class='hidden-480'>Status</th>
-                            <th></th>                            
-                    </tr>
-            </thead>
-            <tbody>
-                    <tr>
-                            <td>Trident</td>
-                            <td>
-                                    Internet
-                                    Explorer 4.0
-                            </td>
-                            <td class='hidden-350'>Win 95+</td>
-                            <td class='hidden-1024'>4</td>
-                            <td class='hidden-480'>X</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Presto</td>
-                            <td>Nokia N800</td>
-                            <td class='hidden-350'>N800</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.4</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>A</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-                    <tr>
-                            <td>Misc</td>
-                            <td>Dillo 0.8</td>
-                            <td class='hidden-350'>Embedded devices</td>
-                            <td class='hidden-1024'>-</td>
-                            <td class='hidden-480'>X</td>
-                            <td>
-                                <?php echo "<div class='pull-right'>
-                                    <a href='" . URL . "project/intro' class='btn btn-info' id='activities'><i class='icon-pencil'></i></a>
-                                    <a href='" . URL . "project/intro' class='btn btn-danger' id='activities'><i class='icon-trash'></i></a>
-                                </div>";
-                                ?>                                 
-                            </td>
-                    </tr>
-            </tbody>
-    </table></div>
-</div>                            
-                            
-                        </div>
-                </div>
-        </div>
+        
 </div>
  
 
