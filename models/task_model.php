@@ -16,7 +16,7 @@ class Task_Model extends Model
 		parent::__construct();
 	}
 
-	public function create($data)
+	public function create($data = array())
 	{
 		//Check if the object is already loaded: 
 		if(!$this->isloaded)
@@ -26,8 +26,8 @@ class Task_Model extends Model
 			'name' => $data['name'],
 			'description' => $data['description'],
 			'sprintID' => $data['sprintID'],
-			'state' => $data['sprintID'],
-			'deadline' => date('deadline') // use GMT aka UTC 0:00
+			'state' => $data['state'],
+			//'deadline' => date('deadline') // use GMT aka UTC 0:00
 		));
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
@@ -48,5 +48,13 @@ class Task_Model extends Model
 		
 	
 }
+$data = array(
+			'name' => 'Dette er min task',
+			'description' => 'Dette er min description',
+			'sprintID' => 1,
+			'state' => 'TODO');
+
+$modeltest = new Task_Model();
+$modeltest->create($data);
 
 ?>

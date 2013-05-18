@@ -19,11 +19,12 @@ class Database extends PDO
      */
     public function select($sql, $array = array(), $fetchMode = PDO::FETCH_ASSOC)
     {
+    	//Call prepare on SQL string
         $sth = $this->prepare($sql);
+        //create key value pairs from array
         foreach ($array as $key => $value) {
             $sth->bindValue("$key", $value);
         }
-        
         $sth->execute();
         return $sth->fetchAll($fetchMode);
     }
