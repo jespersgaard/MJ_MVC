@@ -1,6 +1,6 @@
 <?php 
 
-class Task_Model extends Model
+class Task_Model
 {
 	public $ID;
 	public $name;
@@ -13,7 +13,7 @@ class Task_Model extends Model
 	public function __construct()
 	{
 		$this->isLoaded = FALSE;
-		parent::__construct();
+		$this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
 	}
 
 	public function create($data = array())
