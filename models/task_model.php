@@ -34,7 +34,7 @@ class Task_Model
 			'description' => $data['description'],
 			'sprintID' => $data['sprintID'],
 			'state' => $data['state'],
-			'deadline' => $data['deadline'));
+			'deadline' => $data['deadline']));
 		
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
