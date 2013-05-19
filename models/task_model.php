@@ -1,6 +1,6 @@
 <?php 
-require 'Database.php';
-require 'config.php';
+//require 'Database.php';
+//require 'config.php';
 class Task_Model
 {
 	public $ID;
