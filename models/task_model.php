@@ -26,15 +26,15 @@ class Task_Model
 		if(!$this->isLoaded)
 		{
 
-		//prepare deadline to mysql date:
-		$mysqldeadline = date('Y-m-d', $data['deadline']);
+		//prepare deadline to mysql date: possibly deprecated
+		//$mysqldeadline = date('Y-m-d', $data['deadline']);
 		//Insert into db: 
 		$this->db->insert('task', array(
 			'name' => $data['name'],
 			'description' => $data['description'],
 			'sprintID' => $data['sprintID'],
 			'state' => $data['state'],
-			'deadline' => $mysqldeadline));
+			'deadline' => $data['deadline'));
 		
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
