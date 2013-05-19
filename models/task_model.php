@@ -61,7 +61,8 @@ $data = array(
 			'name' => 'Dette er min task',
 			'description' => 'Dette er min description',
 			'sprintID' => 1,
-			'state' => 'TODO');
+			'state' => 'TODO',
+			'deadline' => '2010-02-06');
 
 $modeltest = new Task_Model();
 $modeltest->create($data);
