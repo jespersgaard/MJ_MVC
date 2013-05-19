@@ -2,8 +2,7 @@
 
 require((__DIR__)."/../config.php");
 require((__DIR__)."/../libs/Database.php");
-//require 'Database.php';
-//require 'config.php';
+
 class Task_Model
 {
 	public $ID;
@@ -60,14 +59,22 @@ class Task_Model
 		
 	
 }
-$data = array(
-			'name' => 'Dette er min task',
+
+/*============== TESTING AREA!!! ============*/
+$initial = array(
+			'name' => 'Dette er en ny task task',
 			'description' => 'Dette er min description',
-			'sprintID' => 1,
+			'sprintID' => 2,
 			'state' => 'TODO',
 			'deadline' => '2010-02-06');
 
 $modeltest = new Task_Model();
-$modeltest->create($data);
+$modeltest->create($initial);
+
+$new = array('name' => 'new name in englais',
+	     'taskID' => 2);
+
+$modeltest->updateName($new);
+
 
 ?>
