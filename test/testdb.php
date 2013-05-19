@@ -8,5 +8,5 @@ $dbarray=array('name'=>'ole'
 		);
 
 $result=$db->select($var,$dbarray);
-echo "$result";
+echo $result;
 ?>
