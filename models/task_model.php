@@ -27,7 +27,7 @@ class Task_Model
 		{
 
 		//prepare deadline to mysql date:
-		$mysqldeadline = date('Y-m-d H:i:s', $data['deadline']);
+		$mysqldeadline = date('Y-m-d', $data['deadline']);
 		//Insert into db: 
 		$this->db->insert('task', array(
 			'name' => $data['name'],
