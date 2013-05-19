@@ -1,4 +1,7 @@
 <?php 
+
+require((__DIR__)."/../config.php");
+require((__DIR__)."/../libs/Database.php");
 //require 'Database.php';
 //require 'config.php';
 class Task_Model
