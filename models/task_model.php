@@ -1,5 +1,6 @@
 <?php 
-
+require 'Database.php';
+require 'config.php';
 class Task_Model
 {
 	public $ID;
@@ -19,7 +20,7 @@ class Task_Model
 	public function create($data = array())
 	{
 		//Check if the object is already loaded: 
-		if(!$this->isloaded)
+		if(!$this->isLoaded)
 		{
 
 		//prepare deadline to mysql date:
