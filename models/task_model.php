@@ -52,9 +52,19 @@ class Task_Model
 	$sql=	'SELECT * FROM task WHERE taskID = :taskID';
 	
 	$result=$this->db->select($sql,$where);
-
-	return $result;
+	
+	if($result){
 		
+	$this->ID=$data['taskID'];
+	$this->name=$data['name'];
+	$this->description=$data['description'];
+	$this->sprintID=$data['sprintID'];
+	$this->state=$data['state'];
+	$this->deadLine=$data['deadline'];
+	$this->isLoaded=true;
+	
+	return $result;
+	}			
 	}
 	
 	
