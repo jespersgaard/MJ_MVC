@@ -45,6 +45,18 @@ class Task_Model
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
 	}
+	public function loadTask ($data=array())
+	{//if ($this->isLoaded)
+	$where= array('taskID'=>$data['taskID']);	
+		
+	$sql=	'SELECT * FROM task WHERE taskID = :taskID';
+	
+	$result=$this->db->select($sql,$where);
+
+	return $result;
+		
+	}
+	
 	
 	/*
 	 * Expects that $data is an array and contains the following keys:
