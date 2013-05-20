@@ -45,7 +45,7 @@ class Task_Model
 		$this->name = $data['name']; $this->description = $data['description']; $this->sprintID = $data['sprintID']; $this->state = "TODO"; $this->deadline = $data['deadline']; $this->isLoaded = TRUE;
 		}
 	}
-	public function loadTask ($data=array())
+	public function load($data=array())
 	{//if ($this->isLoaded)
 	$where= array('taskID'=>$data['taskID']);	
 		
@@ -103,16 +103,7 @@ class Task_Model
 			$postData = array('sprintID' => $this->sprintID);
 			$this->db->update('task', $postData, "`taskID` = '{$data['taskID']}'");
 		}
-	}
-	
-	public function load($data = array())
-	{
-		//$phpdate = strtotime( $mysqldate );
-	}
-
-	
-		
-	
+	}	
 }
 
 /*============== TESTING AREA!!! ============*/
