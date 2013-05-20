@@ -2,8 +2,7 @@
 
 require((__DIR__)."/../config.php");
 require((__DIR__)."/../libs/Database.php");
-//require 'Database.php';
-//require 'config.php';
+
 class Task_Model
 {
 	public $ID;
@@ -19,6 +18,13 @@ class Task_Model
 		$this->isLoaded = FALSE;
 		$this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
 	}
+	
+	/*
+	 * Expects that $data is an array and contains the following keys in any order:
+	* 'name', 'description', 'sprintID', 'state', 'deadline'
+	*
+	*/
+	
 
 	public function create($data = array())
 	{
@@ -40,16 +46,50 @@ class Task_Model
 		}
 	}
 	
+	/*
+	 * Expects that $data is an array and contains the following keys:
+	 * 'name', 'taskID'
+	 */
+	
 	public function updateName($data = array()) {
 		
 		if(!$this->isLoaded){
-			$this->load($id);
+			$this->load($data['taskID']);
 		}
 		if($this->isLoaded)
 		{		
 			$postData = array('name' => $data['name']);
 			$this->db->update('task', $postData, "`taskID` = '{$data['taskID']}'");
 			$this->name = $data['name'];
+		}
+	}
+	/*
+	 * Expects that $data is an array and contains the following keys in any order:
+	* 'description', 'taskID'
+	*/
+	public function updateDescription($data = array()) {
+	
+		if(!$this->isLoaded){
+			$this->load($data['taskID']);
+		}
+		if($this->isLoaded)
+		{
+			$postData = array('description' => $data['description']);
+			$this->db->update('task', $postData, "`taskID` = '{$data['taskID']}'");
+			$this->description = $data['description'];
+		}
+	}
+	
+	public function assignToNextSprint($data = array()) {
+	
+		if(!$this->isLoaded){
+			$this->load($data['taskID']);
+		}
+		if($this->isLoaded)
+		{
+			$this->sprintID += 1;
+			$postData = array('sprintID' => $this->sprintID);
+			$this->db->update('task', $postData, "`taskID` = '{$data['taskID']}'");
 		}
 	}
 	
@@ -62,14 +102,22 @@ class Task_Model
 		
 	
 }
-$data = array(
-			'name' => 'Dette er min task',
+
+/*============== TESTING AREA!!! ============*/
+/*$initial = array(
+			'name' => 'Dette er en ny task task',
 			'description' => 'Dette er min description',
-			'sprintID' => 1,
+			'sprintID' => 2,
 			'state' => 'TODO',
 			'deadline' => '2010-02-06');
 
 $modeltest = new Task_Model();
-$modeltest->create($data);
+$modeltest->create($initial);
+
+$new = array('name' => 'new name in englais',
+	     'taskID' => 2);
+
+$modeltest->updateName($new);
+*/
 
 ?>
