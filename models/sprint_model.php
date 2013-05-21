@@ -62,7 +62,7 @@
 			
 			if($result)
 			{
-				print_r($result);	
+				print_r($result);
 			}
 		}
 		
@@ -71,7 +71,14 @@
  	
  }
 
+$data = array('idGroup' => 1, 'dateFrom' => '2010-12-12', 'dateTo' => '2011-03-10');
 
+$newSprint = new Sprint_Model();
+$newSprint->create($data);
 
+$load = array('idSprint' => 1);
+
+$anotherSprint = new Sprint_Model();
+$anotherSprint->load($load);
 
 ?>
