@@ -7,7 +7,7 @@
  * Developer stories:
  * 
  * must have functions:
- * 		loadTasks($data = array()) where $data is sprintID 					======= PENDING
+ * 		loadTasks($data = array()) where $data is sprintID 					======= ONGOING
  * 		create($data = array()) where $data is idGroup, date_from, date_to	======= DONE
  *		loadSprint($data = array()) where $data is idSprint 				======= DONE
  * 
@@ -22,6 +22,7 @@
 
  require((__DIR__)."/../config.php");
  require((__DIR__)."/../libs/Database.php");
+ require((__DIR__)."/../models/task_model.php");
  
  class Sprint_Model
  {
@@ -48,7 +49,7 @@
  					'date_from' => $data['dateFrom'],
  					'date_to' => $data['dateTo']));
  			$this->isLoaded = TRUE;	
- 			$this->IDGroup = $data['idGroup']; $this->dateTo = $data['dateTo']; $this->dateFrom = $data['dateFrom'];
+ 			$this->IDGroup = $data['idGroup']; $this->dateTo = $data['dateTo']; $this->dateFrom = $data['dateFrom']; $this->ID = $data['idSprint'];
  		}
  	}
  	
@@ -72,16 +73,33 @@
 			}
 		}
  	}
+ 	
+ 	//Expects that array contains sprintID
+ 	public function loadTasks($data = array())
+ 	{
+ 		/*DEVELOPER STORIES
+ 		 * create SQL string.		===== DONE 
+ 		 * create WHERE clause.		===== DONE
+ 		 * return array of TASKS	===== PENDING
+ 		 */
+ 		$sql = 'SELECT taskID ,name, description, state, deadline FROM task WHERE sprintID = :sprintID';
+ 		$where = array('sprintID' => $data['sprintID']);
+ 		
+ 		
+ 		$result = $this->db->select($sql,$where);
+ 		
+ 		print_r($result);
+ 	}
  }
 /*===================== TESTING AREA ==============*/
 //$data = array('idGroup' => 1, 'dateFrom' => '2010-12-12', 'dateTo' => '2011-03-10');
 //$newSprint = new Sprint_Model();
 //$newSprint->create($data);
 
-//$load = array('idSprint' => 1);
-
-//$anotherSprint = new Sprint_Model();
-//$anotherSprint->load($load);
+$load = array('idSprint' => 1);
+$anotherSprint = new Sprint_Model();
+$anotherSprint->load($load);
+$anotherSprint->loadTasks($load);
 
 //echo $this->IDGroup; echo $this->dateFrom; echo $this->dateTo;
 
