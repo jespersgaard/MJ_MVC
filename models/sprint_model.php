@@ -20,7 +20,7 @@
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
  */
 
- require((__DIR__)."/../config.php");
+ //require((__DIR__)."/../config.php");
  require((__DIR__)."/../libs/Database.php");
  require((__DIR__)."/../models/task_model.php");
  
