@@ -63,7 +63,8 @@ class Task_Model
 	$this->deadLine=$data['deadline'];
 	$this->isLoaded=true;
 	*/
-	return $result;
+	print_r($result);
+	
 	}			
 	}
 	
