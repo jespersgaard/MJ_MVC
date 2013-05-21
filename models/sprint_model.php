@@ -63,7 +63,12 @@
 			
 			if($result)
 			{
-				print_r($result);
+				
+				//print_r($result);
+				$this->IDGroup = $result[0]['idGroup'];
+				$this->dateFrom = $result[0]['date_from'];
+				$this->dateTo = $result[0]['date_to'];
+				echo $this->IDGroup; echo $this->dateFrom; echo $this->dateTo;
 			}
 		}
 		
@@ -71,11 +76,11 @@
  	}
  	
  }
+/*===================== TESTING AREA ==============*/
+//$data = array('idGroup' => 1, 'dateFrom' => '2010-12-12', 'dateTo' => '2011-03-10');
 
-$data = array('idGroup' => 1, 'dateFrom' => '2010-12-12', 'dateTo' => '2011-03-10');
-
-$newSprint = new Sprint_Model();
-$newSprint->create($data);
+//$newSprint = new Sprint_Model();
+//$newSprint->create($data);
 
 $load = array('idSprint' => 1);
 
