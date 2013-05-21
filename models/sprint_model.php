@@ -40,12 +40,13 @@
  	
  	public function create($data = array()) 
  	{
- 		if(!$this->isLoaded = FALSE)
+ 		if(!$this->isLoaded)
  		{
+			print_r($data);
  			$this->db->insert('sprint', array(
  					'idGroup' => $data['idGroup'],
- 					'dateFrom' => $data['dateFrom'],
- 					'dateTo' => $data['dateTo']));
+ 					'date_from' => $data['dateFrom'],
+ 					'date_to' => $data['dateTo']));
  			$this->isLoaded = TRUE;
  			
  			$this->IDGroup = $data['idGroup']; $this->dateTo = $data['dateTo']; $this->dateFrom = $data['dateFrom'];
