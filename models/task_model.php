@@ -55,14 +55,14 @@ class Task_Model
 	
 	if($result){
 		
-	/*$this->ID=$data['taskID'];
-	$this->name=$data['name'];
-	$this->description=$data['description'];
-	$this->sprintID=$data['sprintID'];
-	$this->state=$data['state'];
-	$this->deadLine=$data['deadline'];
-	$this->isLoaded=true;
-	*/
+	array($this->ID=$data['taskID']);
+	array($this->name=$data['name']);
+	array($this->description=$data['description']);
+	array($this->sprintID=$data['sprintID']);
+	array($this->state=$data['state']);
+	array($this->deadLine=$data['deadline']);
+		$this->isLoaded=true;
+	
 	print_r($result);
 	
 	}			
