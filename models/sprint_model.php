@@ -66,6 +66,8 @@
 				$this->IDGroup = $result[0]['idGroup'];
 				$this->dateFrom = $result[0]['date_from'];
 				$this->dateTo = $result[0]['date_to'];	
+				$this->isLoaded = TRUE;
+				
 				return $result;
 			}
 		}
