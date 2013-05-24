@@ -1,7 +1,8 @@
 <?php
 
 class Project_Model extends Model {
-
+	public $projectID;
+	
 	public function __construct() {
 		parent::__construct();
 	}
@@ -24,14 +25,42 @@ class Project_Model extends Model {
 		return $this->db->select('SELECT  `projectmembers` . * FROM  `projectmembers` ,  `project`  ');
 	}
 	
-	public function create_task($data)
+	public function createProject($data)
 	{
-		$this->db->insert('note', array(
-			'title' => $data['title'],
-			'userid' => $_SESSION['userid'],
-			'content' => $data['content'],
-			'date_added' => date('Y-m-d H:i:s') // use GMT aka UTC 0:00
+		$this->db->insert('project', array(
+			'idUser' => $_SESSION['userid'],
+			'name' => $data['name'],
+			'description' => $data['description'],
+			'status' => $data['status'],
+			'date_from' => date('Y-m-d H:i:s'), // use GMT aka UTC 0:00
+			'date_to' => $data['date_to']
 		));
 	}
 	
+	public function selectProject($idProject)
+	{
+		return $this->db->select('SELECT * FROM project WHERE idProject = :idProject', 
+			array('idProject' => $idProject));
+	}	
+	
+	public function selectSprint($idProject) 	{
+
+		return $this->db->select('SELECT * FROM sprint WHERE idProject = :idProject GROUP BY date_to ASC', 
+			array('idProject' => $idProject));
+	}
+	
+	public function createSprint($data)
+	{
+		$this->db->insert('sprint', array(
+			'idProject' => $data['idProject'],
+			'date_from' => $data['date_from'],
+			'date_to' => $data['date_to']
+		));
+	}
+	
+	public function selectTask($idProject) 	{
+
+		return $this->db->select('SELECT * FROM task WHERE idProject = :idProject GROUP BY date_to ASC', 
+			array('idProject' => $idProject));
+	}	
 }

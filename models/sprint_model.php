@@ -7,25 +7,20 @@
  * Developer stories:
  * 
  * must have functions:
- * 		loadTasks($data = array()) where $data is sprintID 					======= ONGOING
+ * 		loadTasks($data = array()) where $data is sprintID 					======= PENDING
  * 		create($data = array()) where $data is idGroup, date_from, date_to	======= DONE
- *		loadSprint($data = array()) where $data is sprintID 				======= DONE
+ *		loadSprint($data = array()) where $data is idSprint 				======= PENDING
  * 
  * CREATE TABLE IF NOT EXISTS sprint (
-	sprintID	INT NOT NULL AUTO_INCREMENT,
+	idSprint	INT NOT NULL AUTO_INCREMENT,
 	idGroup		INT NOT NULL,
 	date_from	DATE NOT NULL,
 	date_to		DATE NOT NULL,
-	PRIMARY KEY(sprintID)
+	PRIMARY KEY(idsprint)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
  */
-
- //require((__DIR__)."/../config.php");
- //require((__DIR__)."/../libs/Database.php");
- require((__DIR__)."/../models/task_model.php");
  
- class Sprint_Model
- {
+ class Sprint_Model extends Model  {
  	public $ID;
  	public $IDGroup;
  	public $dateFrom;
@@ -38,69 +33,20 @@
  		$this->isLoaded = FALSE;
  		$this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS); 		
  	}
- 	
- 	public function create($data = array()) 
- 	{
- 		if(!$this->isLoaded)
- 		{
-			print_r($data);
- 			$this->db->insert('sprint', array(
- 					'idGroup' => $data['idGroup'],
- 					'date_from' => $data['dateFrom'],
- 					'date_to' => $data['dateTo']));
- 			$this->isLoaded = TRUE;	
- 			$this->IDGroup = $data['idGroup']; $this->dateTo = $data['dateTo']; $this->dateFrom = $data['dateFrom'];
- 		}
- 	}
- 	
- 	public function load($data = array())
- 	{
-		if(!$this->isLoaded)
-		{
-			$sql = 'SELECT idGroup, date_from, date_to FROM sprint WHERE sprintID = :sprintID';
-			$where = array('sprintID' => $data['sprintID']);
-			$result = $this->db->select($sql,$where);
-			
-			if($result)
-			{
-				$this->ID = $data['sprintID'];
-				$this->IDGroup = $result[0]['idGroup'];
-				$this->dateFrom = $result[0]['date_from'];
-				$this->dateTo = $result[0]['date_to'];	
-				$this->isLoaded = TRUE;
-				
-				return $result;
-			}
-		}
- 	}
- 	
- 	//Expects that array contains sprintID
- 	public function loadTasks($data = array())
- 	{
- 		/*DEVELOPER STORIES
- 		 * create SQL string.		===== DONE 
- 		 * create WHERE clause.		===== DONE
- 		 * return array of TASKS	===== PENDING
- 		 */
- 		$sql = 'SELECT taskID ,name, description, state, deadline FROM task WHERE sprintID = :sprintID';
- 		$where = array('sprintID' => $data['sprintID']);
- 		echo 'this is loadTasks';
- 		
- 		$result = $this->db->select($sql,$where);
- 		
- 		print_r($result);
- 	}
+
+	public function selectSprint($idProject) 	{
+
+		return $this->db->select('SELECT * FROM sprint WHERE idProject = :idProject GROUP BY date_to ASC', 
+			array('idProject' => $idProject));
+	}
+	
+	public function create($data)
+	{
+		$this->db->insert('sprint', array(
+			'idProject' => $data['idProject'],
+			'date_from' => $data['date_from'],
+			'date_to' => $data['date_to']
+		));
+	}
+ 
  }
-/*===================== TESTING AREA ==============*/
-$data = array('idGroup' => 1, 'dateFrom' => '2010-12-12', 'dateTo' => '2011-03-10');
-$newSprint = new Sprint_Model();
-$newSprint->create($data);
-echo "hello";
-$load = array('sprintID' => 1);
-$anotherSprint = new Sprint_Model();
-$anotherSprint->load($load);
-$anotherSprint->loadTasks($load);
-
-//echo $this->IDGroup; echo $this->dateFrom; echo $this->dateTo;
-
-?>

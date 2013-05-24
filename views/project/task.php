@@ -1,22 +1,20 @@
-<?php include("modals.php"); ?>		
+<?php include("modals_project.php"); ?>		
 <div class="row-fixed">
 <div class="page-header">	
 <?php echo "<div>
-                <a href='" . URL . "project/intro' class='btn' id='activities'><i class='icon-time'></i> Overview</a>			
-                <a href='" . URL . "project/sprint' class='btn btn'><i class='icon-time'></i> Sprints</a>											
-                <a href='" . URL . "project/task' class='btn btn-primary'><i class='icon-tasks'></i> Tasks</a>											
-                <a href='" . URL . "project/members' class='btn'><i class='icon-group'></i> Members</a>
+<a href='" . URL . "project/intro/" .$this->currentProjectID ."' class='btn' id='activities'><i class='icon-time'></i> Overview</a>			
+<a href='" . URL . "project/sprint/" .$this->currentProjectID ."' class='btn'><i class='icon-time'></i> Sprints</a>  
+<a href='" . URL . "project/task/" .$this->currentProjectID ."' class='btn btn-primary'><i class='icon-tasks'></i> Tasks</a>											
+<a href='" . URL . "project/members/" .$this->currentProjectID ."' class='btn'><i class='icon-group'></i> Members</a>
                   <div class='btn-group pull-right'>
                   <a href='#myModal' data-toggle='modal' class='btn btn-success'><i class='icon-plus-sign'></i> New Main Task</a>
-                    <a class='btn btn-danger dropdown-toggle' data-toggle='dropdown' href='#'><i class='icon-cogs'></i> Project Settings<span class='caret'></span></a>
-                    </a>
-                    <ul class='dropdown-menu pull-right'>
-                            <li><a tabindex='-1' href='" . URL . "project/'>Privacy</a></li>
-                            <li><a tabindex='-1' href='" . URL . "project/'>Settings</a></li>
-                    </ul>
+					<a class='btn btn-danger dropdown-toggle' data-toggle='dropdown' href='#' ><i class='icon-cogs'></i> Project Settings</a>
                 </div>	
                 <hr width='100%'>
-            </div>";?>
+            </div>";
+
+	echo $this->statusmsg;
+?>
 <div class="accordion" id="accordion2">
         <div class="accordion-group">
                 <div class="accordion-heading">
