@@ -42,7 +42,6 @@ class Project extends Controller {
 	}
 
 	function intro() {
-		$this->view->project = $this->model->userSingleList($id);	
         $this->view->render('layout/header');
         $this->view->render('layout/menu_top');
         $this->view->render('layout/menu_sidebar');	
